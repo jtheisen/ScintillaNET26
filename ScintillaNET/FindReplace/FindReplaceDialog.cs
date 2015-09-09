@@ -100,7 +100,7 @@ namespace ScintillaNET
                 }
                 catch (ArgumentException ex)
                 {
-                    lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                    lblStatus.Text = "Fehler im regulären Ausdruck: " + ex.Message;
                     return;
                 }
 
@@ -135,7 +135,7 @@ namespace ScintillaNET
                 }
             }
 
-            lblStatus.Text = "Total found: " + foundRanges.Count.ToString();
+            lblStatus.Text = "Gesamt: " + foundRanges.Count.ToString();
 
             btnClear_Click(null, null);
 
@@ -177,7 +177,7 @@ namespace ScintillaNET
                 }
                 catch (ArgumentException ex)
                 {
-                    lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                    lblStatus.Text = "Fehler im regulären Ausdruck: " + ex.Message;
                     return;
                 }
 
@@ -212,7 +212,7 @@ namespace ScintillaNET
                 }
             }
 
-            lblStatus.Text = "Total Replaced: " + foundRanges.Count.ToString();
+            lblStatus.Text = "Gesamt: " + foundRanges.Count.ToString();
         }
 
 
@@ -237,23 +237,23 @@ namespace ScintillaNET
             }
             catch (ArgumentException ex)
             {
-                lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                lblStatus.Text = "Fehler im regulären Ausdruck: " + ex.Message;
                 return;
             }
 
 
             if (nextRange == null)
             {
-                lblStatus.Text = "Match could not be found";
+                lblStatus.Text = "Kein Treffer gefunden";
             }
             else
             {
                 if (nextRange.Start > Scintilla.Caret.Anchor)
                 {
                     if (chkSearchSelectionR.Checked)
-                        lblStatus.Text = "Search match wrapped to the begining of the selection";
+                        lblStatus.Text = "Suche kehrt zum Beginn der Auswahl zurück";
                     else
-                        lblStatus.Text = "Search match wrapped to the begining of the document";
+                        lblStatus.Text = "Suche kehrt zum Beginn des Dokuments zurück";
                 }
 
                 nextRange.Select();
@@ -326,22 +326,22 @@ namespace ScintillaNET
             }
             catch (ArgumentException ex)
             {
-                lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                lblStatus.Text = "Fehler im regulären Ausdruck: " + ex.Message;
                 return;
             }
 
             if (foundRange == null)
             {
-                lblStatus.Text = "Match could not be found";
+                lblStatus.Text = "Kein Treffer gefunden";
             }
             else
             {
                 if (foundRange.Start < Scintilla.Caret.Anchor)
                 {
                     if (chkSearchSelectionF.Checked)
-                        lblStatus.Text = "Search match wrapped to the begining of the selection";
+                        lblStatus.Text = "Suche kehrt zum Beginn der Auswahl zurück";
                     else
-                        lblStatus.Text = "Search match wrapped to the begining of the document";
+                        lblStatus.Text = "Suche kehrt zum Beginn des Dokuments zurück";
                 }
 
                 foundRange.Select();
@@ -470,22 +470,22 @@ namespace ScintillaNET
             }
             catch (ArgumentException ex)
             {
-                lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                lblStatus.Text = "Fehler im regulären Ausdruck: " + ex.Message;
                 return;
             }
 
             if (foundRange == null)
             {
-                lblStatus.Text = "Match could not be found";
+                lblStatus.Text = "Kein Treffer gefunden";
             }
             else
             {
                 if (foundRange.Start > Scintilla.Caret.Position)
                 {
                     if (chkSearchSelectionF.Checked)
-                        lblStatus.Text = "Search match wrapped to the _end of the selection";
+                        lblStatus.Text = "Suche kehrt zum Ende der Auswahl zurück";
                     else
-                        lblStatus.Text = "Search match wrapped to the _end of the document";
+                        lblStatus.Text = "Suche kehrt zum Ende des Dokuments zurück";
                 }
 
                 foundRange.Select();
@@ -727,22 +727,22 @@ namespace ScintillaNET
             }
             catch (ArgumentException ex)
             {
-                lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                lblStatus.Text = "Fehler im regulären Ausdruck: " + ex.Message;
                 return;
             }
 
             if (nextRange == null)
             {
-                lblStatus.Text = "Match could not be found";
+                lblStatus.Text = "Kein Treffer gefunden";
             }
             else
             {
                 if (nextRange.Start < Scintilla.Caret.Anchor)
                 {
                     if (chkSearchSelectionR.Checked)
-                        lblStatus.Text = "Search match wrapped to the begining of the selection";
+                        lblStatus.Text = "Suche kehrt zum Beginn der Auswahl zurück";
                     else
-                        lblStatus.Text = "Search match wrapped to the begining of the document";
+                        lblStatus.Text = "Suche kehrt zum Beginn des Dokuments zurück";
                 }
 
                 nextRange.Select();
